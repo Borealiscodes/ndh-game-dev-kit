@@ -1,0 +1,15 @@
+name = "ndh_game_dev_kit_verification"
+version = "2.0.0"
+defaultTargets = ["PersonaZero", "FlopGovernance", "Q16Saturation"]
+
+[[lean_lib]]
+name = "PersonaZero"
+
+[[lean_lib]]
+name = "FlopGovernance"
+
+[[lean_lib]]
+name = "Q16Saturation"
+
+[[lean_lib]]
+name = "EnneractSantaV2"
