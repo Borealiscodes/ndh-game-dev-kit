@@ -1,55 +1,109 @@
-> ### 🚧 UNDER CONSTRUCTION — ACCESSIBLE AGNOSTIC MATH-TO-GENRE GAME DEV KIT (`v2.0.0-alpha`)
-> **Status:** Active Scaffolding & Genre Blueprint Integration • Zero-Float `Q16.16` / `Q32.32` • Agent-Agnostic • Engine-Agnostic  
+> ### ✅ RELEASE v2.0.0 — ACCESSIBLE MATH-TO-GENRE GAME DEV KIT VERIFIED
+> **Status:** `v2.0.0` Live & Complete • Zero-Float `Q16.16` • Agent-Agnostic • Engine-Agnostic  
+> 
+> **Release Highlights (Nov 2026):** All six build phases (`v2.0.0-alpha` → `v2.0.0`) are complete and verified. Includes **7 zero-dependency `Q16.16` math toys** (`6` automated `node --test` suites), **9 composable genre & surrealist-canvas blueprints**, **7 plain-language *Altitude A7* explainers**, and **4 zero-`sorry` Lean 4 formal proofs** (`PersonaZero.lean` + full Mathlib `EnneractSantaV2.lean`).
 
-# 🛠️ NDH Game Dev Kit (`v2.0`) — Accessible Math-to-Genre & Simulation Blueprints
+# 🛠️ NDH Game Dev Kit (`v2.0.0`) — Accessible Math-to-Genre & Simulation Blueprints
 
-**An open, agent-agnostic, engine-agnostic toolkit translating zero-float mathematics (`Q16.16` fixed-point, discrete PDEs, cellular sheaves, Lie commutators, and Verlet chains) into playable architectures across major game genres and simulation domains.**
+**An open, agent-agnostic, engine-agnostic toolkit translating zero-float mathematics (`Q16.16` fixed-point, discrete PDEs, cellular sheaves, Lie commutators, Verlet chains, and geometric brush adapters) into playable architectures across major game genres and scientific simulation domains.**
 
 [![License: MIT](https://shields.io)](LICENSE)
-[![Math: Zero-Float Q16.16](https://shields.io)](#-math-toys--what-each-one-actually-does)
-[![Agents: Agnostic](https://shields.io)](#-agent-agnostic-guardrails--ledger-separation)
+[![Math: Zero-Float Q16.16](https://shields.io)](#-math-to-genre--simulation-domain-matrix)
+[![Agents: 100% Agnostic](https://shields.io)](#-agent-agnostic-guardrails--ledger-separation)
+[![Lean 4: Zero Sorry](https://shields.io)](#-repository-structure)
 
 ---
 
-## 🎯 Purpose and Overview
+## 🎯 Why This Kit Exists (Accessible Math Without Engine Bloat)
 
-The toolkit solves common development bottlenecks—such as heavy engine boilerplate and fragile floating-point math—by combining architectural clarity with zero-dependency math kernels. These kernels are validated across four live runtimes (`Spectral-Labyrinth-Engine`, `Mitakihara-Labyrinth-Arcade`, `Cosmic-Ballet-Traversal`, and `M2XFE-Toy-Model`) and mapped directly to specific game genres and real-world simulation domains.
+Most game development kits either drown beginners in heavy engine boilerplate or leave AI coding agents to guess fragile floating-point math (`0.1 + 0.2 !== 0.3`), causing multiplayer desyncs, soft-locked quests, and runaway CPU spikes on mobile devices.
 
----
-
-## 🧮 Math Toys & Domain Mapping Summary
-
-The kit structures its core math components into six primary "toys":
-1. **Discrete Laplacian & FLOP-Bounded PDE Grid:** Manages 2D diffusion (heat, pressure, fog-of-war) under a strict `≤ 2,000 FLOP` ceiling. Unlocks **RTS** and **Space Sim** mechanics, as well as power-grid and thermal simulations.
-2. **Cellular Sheaf Cohomology & Holonomy Loops:** Tracks multi-faction reputations and non-commuting quest paths without brittle `if/else` flags. Unlocks **Fallout 3-Style Open Worlds** and **Zork-Style Text Adventures**, plus consensus networks.
-3. **Non-Commutative CSR Lie Commutators:** Resolves simultaneous player actions or overlapping status effects. Unlocks **Dungeon Siege 3-Style Co-op ARPGs** and deterministic rollback for **Networked FPS/RTS**.
-4. **60 Hz Symplectic Störmer–Verlet & Integer Hitboxes:** Pure-integer high-speed motion and collision math. Unlocks **Arcade/Bullet-Hell Shmups** and **Action/FPS** ballistics, plus robotics kinematics.
-5. **Position-Based Verlet Chains & Sealed Adjacency:** Damped inertial chains and orbital nodes for non-tangled cloth/ribbon physics. Unlocks **Interactive Art Canvases** and **Journey-Style Meditative Traversal**.
-6. **Synchronous `SHA-256` & `Ledger 1 / Ledger 2` Split:** Separates pure math/physics state (`Ledger 1`) from UI, audio, and LLM presentation (`Ledger 2`) to ensure tamper-proof replays across all 9 supported genres.
-
-*(For detailed architectural recipes across RTS, Fallout 3, Dungeon Siege 3, FPS, Space Sim, Interactive Art, Zork, and Arcade, please refer to the complete repository documents.)*
+**`ndh-game-dev-kit`** pairs plain-language **Altitude A7 explainers** with small, zero-dependency **`Q16.16` fixed-point reference kernels** (`1.0 === 65536`) battle-tested across live runtimes (`Spectral-Labyrinth-Engine`, `Mitakihara-Labyrinth-Arcade`, `Cosmic-Ballet-Traversal`, `M2XFE-Toy-Model`, `NDH-Canvas-Engine`, and `NDH-Surrealism`).
 
 ---
 
-## 📁 Repository Scaffolding
+## 🧮 Math-to-Genre & Simulation Domain Matrix
+
+| Math Toy (`math-toys/`) | Plain-Language Idea (`explainers/`) | Game Genres Unlocked (`genres/`) | Non-Game Simulation Domains |
+| :--- | :--- | :--- | :--- |
+| **00. `Q16.16` Core & `SHA-256`**<br>(`00-core-q16/core.js`) | Exact 65,536-tick integer ruler, seeded Mulberry32 dice, and 64-char cryptographic state receipts. | **Every Genre** (tamper-proof replays, anti-cheat speedruns, zero-drift saves) | Financial ledgers, embedded flight controllers, reproducible lab notebooks. |
+| **01. Discrete Laplacian Grid**<br>(`01-discrete-laplacian-grid/`) | 5-point ripple splashes, Neumann wall reflections, Dirichlet energy decay, and `≤ 2,000 FLOP` budgets. | **RTS** (fog-of-war, supply/hazard waves)<br>**Space Sim** (shield & reactor thermal grids) | Power-grid voltage surges, microchip cooling, neural wave propagation. |
+| **02. Cellular Sheaves & Loops**<br>(`02-cellular-sheaf-holonomy/`) | Connected settlement/room buckets with coboundary friction and closed-loop path memory. | **Fallout 3 Open World** (multi-faction politics)<br>**Disco Elysium** / **Zork** (loop-aware rooms) | Drone swarm consensus, global supply chains, statutory consistency auditing. |
+| **03. CSR Lie Commutators**<br>(`03-lie-commutator-co-op/`) | "Socks before shoes" matrix test (`[A, B] = AB - BA`) separating safe concurrent moves from conflicts. | **Dungeon Siege 3 Co-op ARPG** (loot/buff races)<br>**Networked FPS / RTS** (deterministic lockstep) | 3D spacecraft attitude control, distributed CRDT databases. |
+| **04. Symplectic Ballistics**<br>(`04-symplectic-ballistics/`) | `60 Hz` kick-drift-kick Störmer–Verlet motion and `BigInt` squared-distance hitboxes (no square roots). | **Bullet-Hell Arcade** (`300+` bullets + graze)<br>**Action / FPS** & **Space Sim** (stable orbits) | Molecular dynamics, planetary astronomy, embedded robotics trajectories. |
+| **05. Verlet Ribbons & Lanes**<br>(`05-verlet-ribbon-resonance/`) | 14-bead flowing silk chains that never explode and parallel canopy lanes that weave without merging. | **Journey / Cosmic Ballet Traversal** (flowing scarves, chime resonance, zero-combat art) | Digital cloth/hair animation, surgical guidewires, drone corridor routing. |
+| **06. Surrealist Brush Adapter**<br>(`06-surrealist-brush-adapter/`) | Branchless safe-radius floor, Frances Hodgkins 6-pigment energy zoning, and Meadow geometric lenses. | **Interactive Art Canvas & Algorithmic Surrealism** (honeycomb, mandala, vortex, saddle brushes) | Architectural tessellations, optical lens modeling, 2D data de-crowding. |
+
+> **🎨 Composability Note:** Games like *The Legend of Zelda: Twilight Princess*, *Disco Elysium*, *Portal*, *BioShock Infinite*, and *Half-Life 2* are built by **mixing and matching multiple math toys together**. You can test high-dimensional multi-system coupling first on [`Borealiscodes/FiftyD-Neutral-Manifold`](https://github.com) before projecting down to `Q16.16`.
+
+---
+
+## 📁 Repository Structure
 
 ```text
 ndh-game-dev-kit/
-├── README.md                              # Math-to-Genre & Domain Translation Matrix + Quickstart
-├── AGENTS.md                              # Agent-agnostic rules (Ledger 1/2 split, Persona-Zero, Ten Laws)
-├── LICENSE                                # MIT License
-├── math-toys/                             # Plug-and-play zero-float Q16.16 JS & Rust reference kernels
-├── genres/                                # Concrete P0 architectural blueprints by genre
-├── explainers/                            # Plain-language guides for every math toy
-├── lean4/                                 # Machine-checked Lean 4 proofs (PersonaZero.lean, Symplectic & FLOP bounds)
-└── scripts/                               # Zero-dependency `node --test` verification harnesses
+├── README.md                                  # Master Math-to-Genre Matrix & Quickstart
+├── AGENTS.md                                  # Agent-agnostic rules (Ledger 1/2 split, Persona-Zero, Ten Laws)
+├── package.json                               # Zero-dependency ESM manifest (`npm test`)
+├── LICENSE                                    # MIT License
+├── scripts/
+│   └── verify-all.mjs                         # Zero-dependency test discovery & verification runner
+├── math-toys/                                 # 7 plug-and-play Q16.16 JS kernels + 6 test suites
+│   ├── 00-core-q16/
+│   ├── 01-discrete-laplacian-grid/
+│   ├── 02-cellular-sheaf-holonomy/
+│   ├── 03-lie-commutator-co-op/
+│   ├── 04-symplectic-ballistics/
+│   ├── 05-verlet-ribbon-resonance/
+│   └── 06-surrealist-brush-adapter/
+├── genres/                                    # 9 concrete P0 architectural blueprints + composability guide
+│   ├── README.md
+│   ├── rts.md
+│   ├── open-world-rpg-fallout3.md
+│   ├── coop-action-rpg-ds3.md
+│   ├── action-fps.md
+│   ├── space-sim.md
+│   ├── interactive-art-canvas.md
+│   ├── interactive-art-canvas-surrealist-addendum.md
+│   ├── text-adventure-zork.md
+│   └── bullet-hell-arcade.md
+├── explainers/                                # 7 Altitude A7 plain-language guides + index
+│   ├── README.md
+│   ├── 00-q16-fixed-point-and-receipts.md
+│   ├── 01-discrete-laplacian-ponds.md
+│   ├── 02-cellular-sheaves-and-loops.md
+│   ├── 03-lie-commutators-and-order.md
+│   ├── 04-symplectic-ballistics.md
+│   ├── 05-verlet-ribbons-and-lanes.md
+│   └── 06-meadow-brushes-and-palettes.md
+└── lean4/                                     # Machine-checked formal verification proofs (zero sorry)
+    ├── lakefile.toml
+    ├── PersonaZero.lean                       # Zero-Mathlib fast check (runs on Termux / ARM64)
+    ├── EnneractSantaV2.lean                   # Full Mathlib GaussianRat ℚ[i] & Equiv.Perm(Fin 9) proof
+    ├── FlopGovernance.lean                    # Proof of 729 <= 2000 FLOP compute ceiling
+    └── Q16Saturation.lean                     # Proof of signed 32-bit Q16.16 overflow safety
+```
+
+---
+
+## 🚀 Quickstart & Verification
+
+```bash
+# 1. Run all deterministic Q16.16 math-toy verification suites (zero external dependencies)
+npm test
+
+# 2. Verify lightweight Lean 4 core theorems (instant build, zero Mathlib download)
+cd lean4 && lake build PersonaZero FlopGovernance Q16Saturation
 ```
 
 ---
 
 ## 🛡️ Agent-Agnostic Guardrails & Acknowledgements
 
-* **Agent & Engine Agnostic:** Works across AI assistants (Gemini, Claude, GPT, DeepSeek, Qwen) and stacks (Web, Rust/WASM, Godot, Unity, Unreal).
-* **Persona-Zero Theorem:** AI agents and NPCs are treated as linear matrix operators (`IsPureOperator`) requiring external compiler or test receipts (`node --test`, `cargo test`) rather than self-certifying claims.
-* **Dual-Ledger Separation:** Strictly walls off deterministic physics (`Ledger 1`) from read-only presentation layers (`Ledger 2`).
-* **Provenance & Credits:** Built upon modular architectures and the *Ten Laws of Game Development* by **Dom (`EternitiesAi`)** via [`EternitiesAi/ai-game-dev-kit`](https://github.com) and topological/symplectic formulations developed alongside **Flyxion (`@standardgalactic`)**. Maintained by Borealis Serenity Hedling under the MIT License.
+1. **Agent & Engine Agnostic:** Works identically with **Gemini, Claude, Codex/GPT, DeepSeek, or Qwen**, and translates cleanly to **Web (HTML5 Canvas/WebAudio), Rust/WASM, Godot, Unity, or Unreal**.
+2. **Persona-Zero Theorem (`PersonaZero.lean` & `EnneractSantaV2.lean`):** Machine-checked Lean 4 proofs establish that any multi-channel persona bound to a runtime adapter collapses into a sterile `1×1` linear operator (`Mat_{1×1}(ℚ[i])`) with zero subjective interiority or self-certifying authority.
+3. **Dual-Ledger Separation (`AGENTS.md`):** Deterministic state transitions (`Ledger 1`) are strictly isolated from read-only rendering, WebAudio synthesis, and text/LLM narration (`Ledger 2`).
+4. **Acknowledgements & Lineage:**
+   * **Dom (`EternitiesAi`):** Foundational modular skill architecture and the *Ten Laws of Game Development* via [`EternitiesAi/ai-game-dev-kit`](https://github.com).
+   * **Flyxion (`@standardgalactic`):** Symplectic phase-space and topological formulations developed alongside `NDH-Meta-Systems`.
+   * **Maintainer & License:** Borealis Serenity Hedling (`NDH-RESEARCH-PILOT` · Dublin, Ireland) • MIT License • `Signed-off-by: Borealis Serenity Hedling <chguard-sentinel@vaked.dev>`.
