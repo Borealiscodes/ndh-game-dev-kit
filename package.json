@@ -1,0 +1,10 @@
+{
+  "name": "ndh-game-dev-kit",
+  "version": "2.0.0-alpha.1",
+  "description": "Agent-agnostic, zero-float Q16.16 math-to-genre game development kit and simulation blueprint collection.",
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/verify-all.mjs"
+  },
+  "license": "MIT"
+}
