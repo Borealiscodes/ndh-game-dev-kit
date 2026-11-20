@@ -5,6 +5,21 @@
 > 
 > **Experimental Notice (`Modules 07 & 08`):** Modules **`07-sensory-regulation-envelope`** and **`08-nonvisual-spatial-bridge`** are released as **experimental pre-release modules** actively undergoing field testing across browser screen readers, refreshable Braille displays, WebAudio environments, and haptic controllers; their APIs and parameter thresholds may evolve as real-world accessibility testing continues.
 
+## 🌐 Proven Open-Source Accessibility Ecosystems & Standards
+
+When bridging `07-sensory-regulation-envelope` and `08-nonvisual-spatial-bridge` into production browser, desktop, or native engine builds, pair `Ledger 2` outputs with these proven open-source accessibility foundations:
+
+* **NVDA Screen Reader (`nvaccess/nvda`):** https://github.com — Consumes `ariaLiveText` (`role="status"`, `aria-live="polite"`) emitted by `08-nonvisual-spatial-bridge` on Windows.
+* **Orca Screen Reader (`GNOME/orca`):** https://github.com — Consumes `aria-live` and AT-SPI descriptive narration on Linux desktops.
+* **Liblouis Braille Translator (`liblouis/liblouis`):** https://github.com — Open-source Braille translator and back-translator pairing `renderBrailleRadarBar` (`U+2800`–`U+28FF`) with contracted/uncontracted HID Braille displays.
+* **AccessKit Cross-Platform Accessibility Tree (`AccessKit/accesskit`):** https://github.com — Rust/C/C++/Python accessibility tree infrastructure bridging custom 2D/3D canvases to Windows UIA, macOS NSAccessibility, Linux AT-SPI, and Android TalkBack.
+* **Godot Screen-Reader Plugin (`LightsOutGames/godot-accessibility`):** https://github.com — Proven open-source Godot accessibility plugin for focus narration and non-visual menu traversal.
+* **Omnitone Spatial WebAudio (`GoogleChrome/omnitone`):** https://github.com — Reference WebAudio spatial/binaural audio rendering complementing `08`'s stereo proximity beacons.
+* **Tone.js WebAudio Framework (`Tonejs/Tone.js`):** https://github.com — Reference WebAudio scheduling and envelope shaping complementing `07`'s low-pass sensory limiter.
+* **Game Accessibility Guidelines:** https://gameaccessibilityguidelines.com — Community-vetted motor, cognitive, vision, and hearing design checklist.
+* **W3C WAI-ARIA 1.2 Specification:** https://w3.org — Standard for `aria-live` polite/assertive non-visual status announcements.
+
+
 # 🛠️ NDH Game Dev Kit (`v2.1.0-exp`) — Accessible Math-to-Genre & Simulation Blueprints
 
 **An open, agent-agnostic, engine-agnostic toolkit translating zero-float mathematics (`Q16.16` fixed-point, discrete PDEs, cellular sheaves, Lie commutators, Verlet chains, geometric brush adapters, and Social Model accessibility bridges) into playable architectures across major game genres and scientific simulation domains.**
