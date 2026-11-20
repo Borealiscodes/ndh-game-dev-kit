@@ -37,7 +37,7 @@ Most game development kits either drown beginners in heavy engine boilerplate or
 | **07. Sensory Regulation Envelope**<br>(`07-sensory-regulation-envelope/`) | Zero-strobe flash lock, zero camera shake, `<= 850 Hz` low-pass audio limiter, and adjustable `Q16.16` pacing. | **Every Genre** (neurodivergent comfort, migraine & photosensitivity safety) | Calm clinical/educational interfaces, low-stimulation dashboards. |
 | **08. Non-Visual Spatial Bridge**<br>(`08-nonvisual-spatial-bridge/`) | Ternary `{-1, 0, +1}` bearings, `aria-live` narration, stereo radar beacons, 5-cell Unicode Braille bars, and slew-limited haptics. | **Every Genre** (blind/low-vision audio-first play, refreshable Braille & DualSense/adaptive controllers) | Non-visual museum/theatre navigation (RNIB-style), assistive robotics feedback. |
 
-> **🎨 Composability Note:** Games like *The Legend of Zelda: Twilight Princess*, *Disco Elysium*, *Portal*, *BioShock Infinite*, and *Half-Life 2* are built by **mixing and matching multiple math toys together**. You can test high-dimensional multi-system coupling first on [`Borealiscodes/FiftyD-Neutral-Manifold`](https://github.com) before projecting down to `Q16.16`.
+> **🎨 Composability Note:** Games like *The Legend of Zelda: Twilight Princess*, *Disco Elysium*, *Portal*, *BioShock Infinite*, and *Half-Life 2* are built by **mixing and matching multiple math toys together**. You can test high-dimensional multi-system coupling first on [`Borealiscodes/FiftyD-Neutral-Manifold`](https://github.com/Borealiscodes/FiftyD-Neutral-Manifold) before projecting down to `Q16.16`.
 
 ---
 
@@ -59,6 +59,9 @@ ndh-game-dev-kit/
 │   ├── 04-symplectic-ballistics/
 │   ├── 05-verlet-ribbon-resonance/
 │   └── 06-surrealist-brush-adapter/
+    └── 06-surrealist-brush-adapter/
+    └── 07-sensory-regulation-envelope/
+    └── 08-nonvisual-spatial-bridge/
 ├── genres/                                    # 9 concrete P0 architectural blueprints + composability guide
 │   ├── README.md
 │   ├── rts.md
