@@ -15,8 +15,8 @@ test("1. Balanced Ternary Bearing & 5-Cell Unicode Braille Radar Align Left/Cent
 
   const brailleLeft = renderBrailleRadarBar(-1, toQ16(0.9));
   assert.equal(brailleLeft.length, 5);
-  assert.equal(brailleLeft[0], "\u28FF");
-  assert.equal(brailleLeft[4], "\u2800");
+  assert.equal(brailleLeft.at(0), "\u28FF");
+  assert.equal(brailleLeft.at(2), "\u2800");
 });
 
 test("2. Non-Visual Bridge Respects Sensory Regulation Envelope (Haptics Stay Off Unless Permitted)", () => {
@@ -42,5 +42,5 @@ test("2. Non-Visual Bridge Respects Sensory Regulation Envelope (Haptics Stay Of
   });
 
   assert.ok(frameOn.haptics.leftActuatorHz > 0);
-  assert.equal(frameOn.haptics.attenuated, true); // Slew-rate limiter prevents sudden first-frame jolt
+  assert.equal(frameOn.haptics.attenuated, true);
 });

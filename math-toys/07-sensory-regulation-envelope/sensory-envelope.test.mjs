@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { Q_ONE, toQ16 } from "../00-core-q16/core.js";
+import { toQ16 } from "../00-core-q16/core.js";
 import {
   createSensoryRegulationProfile,
   filterVisualStimuli,
@@ -14,10 +14,7 @@ test("1. Default Sensory Regulation Profile Blocks Flash, Shake & Unexpected Hap
   assert.equal(profile.reducedMotion, true);
   assert.equal(profile.allowHaptics, false);
 
-  const vis = filterVisualStimuli(
-    { flashAlphaQ16: toQ16(0.9), shakeOffsetQ16: toQ16(14), particleCount: 50 },
-    profile
-  );
+  const vis = filterVisualStimuli({ flashAlphaQ16: toQ16(0.9), shakeOffsetQ16: toQ16(14), particleCount: 50 }, profile);
   assert.equal(vis.flashAlphaQ16, 0);
   assert.equal(vis.shakeOffsetQ16, 0);
   assert.equal(vis.particleCount, 0);
@@ -26,7 +23,6 @@ test("1. Default Sensory Regulation Profile Blocks Flash, Shake & Unexpected Hap
 test("2. Gentle Audio Limiter Caps Harsh Cutoff Frequencies, Gain & Sudden Attacks", () => {
   const profile = createSensoryRegulationProfile();
   const safe = clampGentleAudioParams({ gainQ16: toQ16(0.4), cutoffHz: 4200, attackMs: 2 }, profile);
-
   assert.equal(safe.gainQ16, profile.maxAudioGainQ16);
   assert.equal(safe.cutoffHz, 850);
   assert.equal(safe.attackMs, 25);
@@ -36,6 +32,5 @@ test("2. Gentle Audio Limiter Caps Harsh Cutoff Frequencies, Gain & Sudden Attac
 test("3. Pacing Scaler Computes Deterministic Half-Speed Step in Q16.16", () => {
   const profile = createSensoryRegulationProfile({ timeScaleQ16: toQ16(0.5) });
   const baseDt = toQ16(1 / 60);
-  const halfDt = scalePacingStepQ16(baseDt, profile);
-  assert.equal(halfDt, Math.floor(baseDt / 2));
+  assert.equal(scalePacingStepQ16(baseDt, profile), Math.floor(baseDt / 2));
 });

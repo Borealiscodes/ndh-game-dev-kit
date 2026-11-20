@@ -1,41 +1,22 @@
-/**
- * math-toys/08-nonvisual-spatial-bridge/nonvisual-bridge.js
- * Non-Visual Spatial Substitution, Descriptive Audio, Braille Radar & Dual-Actuator Haptics (Ledger 2)
- *
- * Purpose: Provides blind, low-vision, and tactile-first players with descriptive
- * aria-live narration, RNIB-style stereo audio radar cues, 5-cell Unicode Braille
- * spatial indicators, and slew-limited DualSense/Vibration haptics—while strictly
- * obeying 07-sensory-regulation-envelope when composed together.
- *
- * Adapted from Borealiscodes/anima_esoteric_mirror (ternary_projection.py & core.py).
- * Signed-off-by: Borealis Serenity Hedling <chguard-sentinel@vaked.dev>
- */
-
 import { Q_ONE, toQ16, fromQ16, qMul } from "../00-core-q16/core.js";
 import { createSensoryRegulationProfile, clampGentleAudioParams } from "../07-sensory-regulation-envelope/sensory-envelope.js";
 
 export function createNonVisualBridgeProfile(overrides = {}) {
   return {
-    descriptiveAudio: true,   // Screen-reader aria-live & speechSynthesis narration
-    audioRadar: true,         // Stereo-panned proximity beacon
-    brailleTactileBar: true,  // 8-dot Unicode Braille spatial indicator (U+2800..U+28FF)
-    hapticsOptIn: true,       // DualSense / Gamepad / navigator.vibrate output (gated by regulation envelope)
+    descriptiveAudio: true,
+    audioRadar: true,
+    brailleTactileBar: true,
+    hapticsOptIn: true,
     ...overrides,
   };
 }
 
-/**
- * Projects Q16.16 entity offsets into discrete balanced ternary {-1, 0, +1} bearings.
- */
 export function projectTernaryBearingQ16(dxQ16, dyQ16, deadzoneQ16 = toQ16(16)) {
   const tx = dxQ16 > deadzoneQ16 ? 1 : dxQ16 < -deadzoneQ16 ? -1 : 0;
   const ty = dyQ16 > deadzoneQ16 ? 1 : dyQ16 < -deadzoneQ16 ? -1 : 0;
   return { tx, ty };
 }
 
-/**
- * Renders a 5-cell Unicode Braille spatial bar (U+2800..U+28FF) for refreshable Braille displays.
- */
 export function renderBrailleRadarBar(tx, proximityQ16) {
   const p = Math.max(0, Math.min(Q_ONE, proximityQ16 | 0));
   const LEVELS = ["\u2800", "\u2844", "\u2866", "\u2877", "\u28FF"];
@@ -45,9 +26,6 @@ export function renderBrailleRadarBar(tx, proximityQ16) {
   return Array.from({ length: 5 }, (_, i) => (i === slot ? activeCell : "\u2800")).join("");
 }
 
-/**
- * Slew-rate & clipping-protected dual-actuator haptic envelope (0..150 Hz low, 0..220 Hz high).
- */
 export function computeSafeHapticEnvelopeQ16(rawLeftQ16, rawRightQ16, prevLeftQ16 = 0, prevRightQ16 = 0) {
   const MAX_SLEW_Q16 = toQ16(0.35);
   let l = Math.max(0, rawLeftQ16 | 0);
@@ -80,9 +58,6 @@ export function computeSafeHapticEnvelopeQ16(rawLeftQ16, rawRightQ16, prevLeftQ1
   };
 }
 
-/**
- * Composes non-visual cues with a sensory-regulation envelope so audio & haptics stay gentle.
- */
 export function buildNonVisualCueFrame({
   targetLabel = "Beacon",
   dxQ16 = 0,
@@ -98,10 +73,7 @@ export function buildNonVisualCueFrame({
   const proximity = Math.max(0, Math.min(1, 1 - dist / maxR));
   const proximityQ16 = toQ16(proximity);
 
-  const dirWords = [
-    ty < 0 ? "ahead" : ty > 0 ? "behind" : "",
-    tx < 0 ? "left" : tx > 0 ? "right" : "",
-  ].filter(Boolean);
+  const dirWords = [ty < 0 ? "ahead" : ty > 0 ? "behind" : "", tx < 0 ? "left" : tx > 0 ? "right" : ""].filter(Boolean);
   const bearingDesc = dirWords.length > 0 ? dirWords.join("-") : "dead-center";
 
   const ariaLiveText = bridgeProfile.descriptiveAudio
