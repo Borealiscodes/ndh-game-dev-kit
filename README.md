@@ -1,9 +1,9 @@
-> ### ✅ RELEASE v2.0.0 — ACCESSIBLE MATH-TO-GENRE GAME DEV KIT VERIFIED
-> **Status:** `v2.0.0` Live & Complete • Zero-Float `Q16.16` • Agent-Agnostic • Engine-Agnostic  
+> ### ✅ RELEASE v2.1.0 — ACCESSIBLE MATH-TO-GENRE GAME DEV KIT VERIFIED
+> **Status:** `v2.1.0` Live & Complete • Zero-Float `Q16.16` • Agent-Agnostic • Engine-Agnostic  
 > 
-> **Release Highlights (Nov 2026):** All six build phases (`v2.0.0-alpha` → `v2.0.0`) are complete and verified. Includes **7 zero-dependency `Q16.16` math toys** (`6` automated `node --test` suites), **9 composable genre & surrealist-canvas blueprints**, **7 plain-language *Altitude A7* explainers**, and **4 zero-`sorry` Lean 4 formal proofs** (`PersonaZero.lean` + full Mathlib `EnneractSantaV2.lean`).
+> **Release Highlights (Nov 2026):** All six build phases (`v2.1.0-alpha` → `v2.1.0`) are complete and verified. Includes **9 zero-dependency `Q16.16` math toys** (`8` automated `node --test` suites, `11/11` passing), **9 composable genre & surrealist-canvas blueprints**, **9 plain-language *Altitude A7* explainers**, and **4 zero-`sorry` Lean 4 formal proofs** (`PersonaZero.lean` + full Mathlib `EnneractSantaV2.lean`).
 
-# 🛠️ NDH Game Dev Kit (`v2.0.0`) — Accessible Math-to-Genre & Simulation Blueprints
+# 🛠️ NDH Game Dev Kit (`v2.1.0`) — Accessible Math-to-Genre & Simulation Blueprints
 
 **An open, agent-agnostic, engine-agnostic toolkit translating zero-float mathematics (`Q16.16` fixed-point, discrete PDEs, cellular sheaves, Lie commutators, Verlet chains, and geometric brush adapters) into playable architectures across major game genres and scientific simulation domains.**
 
@@ -34,6 +34,9 @@ Most game development kits either drown beginners in heavy engine boilerplate or
 | **05. Verlet Ribbons & Lanes**<br>(`05-verlet-ribbon-resonance/`) | 14-bead flowing silk chains that never explode and parallel canopy lanes that weave without merging. | **Journey / Cosmic Ballet Traversal** (flowing scarves, chime resonance, zero-combat art) | Digital cloth/hair animation, surgical guidewires, drone corridor routing. |
 | **06. Surrealist Brush Adapter**<br>(`06-surrealist-brush-adapter/`) | Branchless safe-radius floor, Frances Hodgkins 6-pigment energy zoning, and Meadow geometric lenses. | **Interactive Art Canvas & Algorithmic Surrealism** (honeycomb, mandala, vortex, saddle brushes) | Architectural tessellations, optical lens modeling, 2D data de-crowding. |
 
+| **07. Sensory Regulation Envelope**<br>(`07-sensory-regulation-envelope/`) | Zero-strobe flash lock, zero camera shake, `<= 850 Hz` low-pass audio limiter, and adjustable `Q16.16` pacing. | **Every Genre** (neurodivergent comfort, migraine & photosensitivity safety) | Calm clinical/educational interfaces, low-stimulation dashboards. |
+| **08. Non-Visual Spatial Bridge**<br>(`08-nonvisual-spatial-bridge/`) | Ternary `{-1, 0, +1}` bearings, `aria-live` narration, stereo radar beacons, 5-cell Unicode Braille bars, and slew-limited haptics. | **Every Genre** (blind/low-vision audio-first play, refreshable Braille & DualSense/adaptive controllers) | Non-visual museum/theatre navigation (RNIB-style), assistive robotics feedback. |
+
 > **🎨 Composability Note:** Games like *The Legend of Zelda: Twilight Princess*, *Disco Elysium*, *Portal*, *BioShock Infinite*, and *Half-Life 2* are built by **mixing and matching multiple math toys together**. You can test high-dimensional multi-system coupling first on [`Borealiscodes/FiftyD-Neutral-Manifold`](https://github.com) before projecting down to `Q16.16`.
 
 ---
@@ -48,7 +51,7 @@ ndh-game-dev-kit/
 ├── LICENSE                                    # MIT License
 ├── scripts/
 │   └── verify-all.mjs                         # Zero-dependency test discovery & verification runner
-├── math-toys/                                 # 7 plug-and-play Q16.16 JS kernels + 6 test suites
+├── math-toys/                                 # 9 plug-and-play Q16.16 JS kernels + 8 test suites
 │   ├── 00-core-q16/
 │   ├── 01-discrete-laplacian-grid/
 │   ├── 02-cellular-sheaf-holonomy/
@@ -67,7 +70,7 @@ ndh-game-dev-kit/
 │   ├── interactive-art-canvas-surrealist-addendum.md
 │   ├── text-adventure-zork.md
 │   └── bullet-hell-arcade.md
-├── explainers/                                # 7 Altitude A7 plain-language guides + index
+├── explainers/                                # 9 Altitude A7 plain-language guides + index
 │   ├── README.md
 │   ├── 00-q16-fixed-point-and-receipts.md
 │   ├── 01-discrete-laplacian-ponds.md
@@ -75,7 +78,9 @@ ndh-game-dev-kit/
 │   ├── 03-lie-commutators-and-order.md
 │   ├── 04-symplectic-ballistics.md
 │   ├── 05-verlet-ribbons-and-lanes.md
-│   └── 06-meadow-brushes-and-palettes.md
+│   ├── 06-meadow-brushes-and-palettes.md
+│   ├── 07-sensory-regulation-envelope.md
+│   └── 08-nonvisual-spatial-bridge.md
 └── lean4/                                     # Machine-checked formal verification proofs (zero sorry)
     ├── lakefile.toml
     ├── PersonaZero.lean                       # Zero-Mathlib fast check (runs on Termux / ARM64)
@@ -103,7 +108,8 @@ cd lean4 && lake build PersonaZero FlopGovernance Q16Saturation
 1. **Agent & Engine Agnostic:** Works identically with **Gemini, Claude, Codex/GPT, DeepSeek, or Qwen**, and translates cleanly to **Web (HTML5 Canvas/WebAudio), Rust/WASM, Godot, Unity, or Unreal**.
 2. **Persona-Zero Theorem (`PersonaZero.lean` & `EnneractSantaV2.lean`):** Machine-checked Lean 4 proofs establish that any multi-channel persona bound to a runtime adapter collapses into a sterile `1×1` linear operator (`Mat_{1×1}(ℚ[i])`) with zero subjective interiority or self-certifying authority.
 3. **Dual-Ledger Separation (`AGENTS.md`):** Deterministic state transitions (`Ledger 1`) are strictly isolated from read-only rendering, WebAudio synthesis, and text/LLM narration (`Ledger 2`).
-4. **Acknowledgements & Lineage:**
+4. **Social Model Accessibility (`07` & `08`):** Removes environmental barriers (unthrottled strobes, harsh frequencies, sight-only cues) strictly inside `Ledger 2` without collecting identity metadata or altering `Ledger 1` math.
+5. **Acknowledgements & Lineage:**
    * **Dom (`EternitiesAi`):** Foundational modular skill architecture and the *Ten Laws of Game Development* via [`EternitiesAi/ai-game-dev-kit`](https://github.com).
    * **Flyxion (`@standardgalactic`):** Symplectic phase-space and topological formulations developed alongside `NDH-Meta-Systems`.
    * **Maintainer & License:** Borealis Serenity Hedling (`NDH-RESEARCH-PILOT` · Dublin, Ireland) • MIT License • `Signed-off-by: Borealis Serenity Hedling <chguard-sentinel@vaked.dev>`.
