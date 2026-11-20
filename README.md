@@ -1,11 +1,13 @@
-> ### ✅ RELEASE v2.1.0 — ACCESSIBLE MATH-TO-GENRE GAME DEV KIT VERIFIED
-> **Status:** `v2.1.0` Live & Complete • Zero-Float `Q16.16` • Agent-Agnostic • Engine-Agnostic  
+> ### 🧪 RELEASE v2.1.0-exp — CORE VERIFIED (`00`–`06`) & EXPERIMENTAL ACCESSIBILITY PRE-RELEASE (`07`–`08`)
+> **Status:** Core `v2.0.0` Stable (`00`–`06`) + `v2.1.0-exp` Experimental Pre-Release (`07`–`08`) • Zero-Float `Q16.16` • Agent-Agnostic • Engine-Agnostic  
 > 
-> **Release Highlights (Nov 2026):** All six build phases (`v2.1.0-alpha` → `v2.1.0`) are complete and verified. Includes **9 zero-dependency `Q16.16` math toys** (`8` automated `node --test` suites, `11/11` passing), **9 composable genre & surrealist-canvas blueprints**, **9 plain-language *Altitude A7* explainers**, and **4 zero-`sorry` Lean 4 formal proofs** (`PersonaZero.lean` + full Mathlib `EnneractSantaV2.lean`).
+> **Release Highlights (Nov 2026):** All **8 deterministic `node --test` suites (`11/11` tests)** pass on ARM64, backed by **9 composable genre blueprints**, **9 plain-language *Altitude A7* explainers**, and **4 zero-`sorry` Lean 4 formal proofs** (`PersonaZero.lean` + full Mathlib `EnneractSantaV2.lean`).  
+> 
+> **Experimental Notice (`Modules 07 & 08`):** Modules **`07-sensory-regulation-envelope`** and **`08-nonvisual-spatial-bridge`** are released as **experimental pre-release modules** actively undergoing field testing across browser screen readers, refreshable Braille displays, WebAudio environments, and haptic controllers; their APIs and parameter thresholds may evolve as real-world accessibility testing continues.
 
-# 🛠️ NDH Game Dev Kit (`v2.1.0`) — Accessible Math-to-Genre & Simulation Blueprints
+# 🛠️ NDH Game Dev Kit (`v2.1.0-exp`) — Accessible Math-to-Genre & Simulation Blueprints
 
-**An open, agent-agnostic, engine-agnostic toolkit translating zero-float mathematics (`Q16.16` fixed-point, discrete PDEs, cellular sheaves, Lie commutators, Verlet chains, and geometric brush adapters) into playable architectures across major game genres and scientific simulation domains.**
+**An open, agent-agnostic, engine-agnostic toolkit translating zero-float mathematics (`Q16.16` fixed-point, discrete PDEs, cellular sheaves, Lie commutators, Verlet chains, geometric brush adapters, and Social Model accessibility bridges) into playable architectures across major game genres and scientific simulation domains.**
 
 [![License: MIT](https://shields.io)](LICENSE)
 [![Math: Zero-Float Q16.16](https://shields.io)](#-math-to-genre--simulation-domain-matrix)
